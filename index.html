@@ -337,8 +337,25 @@ body {
   margin: 0;
   min-height: 100vh;
   background: url("https://cdn.jsdelivr.net/gh/konlyi/image@main/background.jpg")
-              center / contain fixed no-repeat; /* ← 改为 contain */
+              center / 88% auto fixed no-repeat; /* ← 关键修改 */
   position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+main, .container, .content {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 960px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,.15);
 }
 </style>
 <body>
