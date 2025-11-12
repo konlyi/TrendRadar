@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{subject}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body,table,td,a{margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+    table{border-collapse:collapse!important;}
+    a{text-decoration:none;color:#1e90ff;}
+    img{border:0;line-height:100%;outline:none;-ms-interpolation-mode:bicubic;}
+    .bg-wrap{background-image:url('{bg_url}');background-size:cover;background-position:center top;background-repeat:no-repeat;background-color:#f2f4f7;}
+    .overlay{background-color:rgba(255,255,255,.92);padding:40px 20px;}
+    .card{background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px;}
+    .card-body{padding:20px;}
+    .card-title{font-size:18px;font-weight:bold;color:#333;margin:0 0 10px;}
+    .card-desc{font-size:14px;color:#555;line-height:1.6;margin:0 0 12px;}
+    .card-link{font-size:14px;color:#1e90ff;}
+    .btn{display:inline-block;padding:10px 20px;background:#1e90ff;color:#fff;border-radius:4px;font-size:14px;}
+    @media screen and (max-width:600px){.overlay{padding:30px 15px;}.card-body{padding:15px;}.card-title{font-size:16px;}}
+  </style>
+</head>
+<body>
+  <table width="100%" cellpadding="0" cellspacing="0" class="bg-wrap">
+    <tr>
+      <td align="center" valign="top">
+        <div class="overlay">
+          <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;">
+            <tr>
+              <td align="center" style="padding-bottom:25px;">
+                <h1 style="margin:0;font-size:26px;color:#333;">{subject}</h1>
+                <p style="margin:5px 0 0;font-size:14px;color:#999;">{date}</p>
+              </td>
+            </tr>
+            {news_rows}
+            <tr>
+              <td align="center" style="padding-top:30px;">
+                <p style="margin:0 0 10px;font-size:13px;color:#999;">由 <a href="https://github.com/{repo}" target="_blank">TrendRadar</a> 自动生成</p>
+                <p style="margin:0;font-size:12px;color:#aaa;">退订请回复「TD」</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
