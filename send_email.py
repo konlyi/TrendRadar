@@ -11,17 +11,17 @@ from datetime import datetime
 EMAIL_FROM    = os.getenv("EMAIL_FROM")          # 例：you@163.com
 EMAIL_PASSWORD= os.getenv("EMAIL_PASSWORD")      # 授权码，不是登录密码！
 EMAIL_TO      = os.getenv("EMAIL_TO")            # 例：a@qq.com,b@gmail.com
-SMTP_SERVER   = "smtp.163.com"                   # 你的发件箱服务器
-SMTP_PORT     = 465                              # SSL 端口
+SMTP_SERVER   = "smtp.qq.com"                   # 你的发件箱服务器
+SMTP_PORT     = 465                             # SSL 端口
 
 # ========== 2. 模板读取 ==========
-tpl = Path("templates/email_template.html").read_text(encoding="utf-8")
+tpl = Path("email_template.html").read_text(encoding="utf-8")
 
 # ========== 3. 数据拼装（这里仅示例，真实数据可由 crawler 生成） ==========
 subject   = "TrendRadar 每日技术热点"
 date_str  = datetime.now().strftime("%Y-%m-%d")
-bg_url    = "https://source.unsplash.com/1600x900/?technology"   # 可换自己的图
-repo      = "yourname/TrendRadar"                               # 你的仓库
+bg_url    = "https://cdn.jsdelivr.net/gh/konlyi/image@main/background.jpg "   # 可换自己的图
+repo      = "konlyi/TrendRadar"                               # 你的仓库
 
 # 假设 crawler 已经把热点存成 list[dict]
 news_list = [
